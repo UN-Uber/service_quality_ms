@@ -3,7 +3,9 @@ import { get } from 'http';
 import { DriverService } from './driver.service';
 import { CreateDriverDto } from './dto/CreateDriver.dto';
 import { Driver } from './schema/Driver.schema';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Driver Controller')
 @Controller('driver')
 export class DriverController {
     constructor(private driverService: DriverService) {  }
@@ -29,3 +31,5 @@ export class DriverController {
     }
 
 }
+
+
