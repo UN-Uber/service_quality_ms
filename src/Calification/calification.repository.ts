@@ -5,7 +5,7 @@ import { CreateCalificationDto } from "./dto/CreateCalification.dto";
 import { UpdateCalificationDto } from "./dto/UpdateCalification.dto";
 import { CalificationType } from "./enum/Calification.enum";
 import { Calification, CalificationDocument } from "./schema/Calification.schema";
-import { Driver } from "src/driver/schema/Driver.schema";
+import { Driver } from "src/Driver/schema/Driver.schema";
 
 @Injectable()
 export class CalificationRepository {

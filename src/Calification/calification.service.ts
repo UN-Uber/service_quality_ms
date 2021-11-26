@@ -1,5 +1,5 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { DriverService } from 'src/driver/driver.service';
+import { DriverService } from 'src/Driver/driver.service';
 import { UserService } from 'src/User/user.service';
 import { CalificationRepository } from './calification.repository';
 import { CreateCalificationDto } from './dto/CreateCalification.dto';

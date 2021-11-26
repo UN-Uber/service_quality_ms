@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { DriverModule } from './driver/driver.module';
+import { DriverModule } from './Driver/driver.module';
 import { MONGO_CONNECTION } from './app.properties';
 import { MongooseModule } from '@nestjs/mongoose';
-import { CalificationModule } from './calification/calification.module';
+import { CalificationModule } from './Calification/calification.module';
 import { UserModule } from './User/user.module';
 
 @Module({
