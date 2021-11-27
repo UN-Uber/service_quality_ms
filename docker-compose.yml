@@ -10,8 +10,8 @@ services:
             dockerfile: ./Dockerfile
         command: npm run start:debug
         ports:
-            - 3000:3000
-            - 9229:9229
+            - 80:80
+            - 8080:8080
         networks:
             - nesjs-network
         volumes:
@@ -27,8 +27,8 @@ services:
             dockerfile: ./Dockerfile
         command: npm run start:prod
         ports:
-            - 3000:3000
-            - 9229:9229
+            - 80:80
+            - 8080:8080
         networks:
             - nesjs-network
         volumes:
