@@ -42,4 +42,13 @@ export class DriverService {
         return await this.driverRepository.update(id, driver);
     }
 
+    async modifyOcuppied(id: string){
+        let driver = await this.getById(id);
+        driver.occupied = !driver.occupied;
+        return await this.driverRepository.update(id, driver);
+    }
+
+    async getOneUnoccupied(): Promise<Driver> {
+        return await this.driverRepository.findOneUnoccupied();
+    }
 }
