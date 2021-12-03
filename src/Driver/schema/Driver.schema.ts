@@ -23,7 +23,8 @@ export class Driver{
     email : string;
     @Prop({ default: 0 })
     totalOfComments : number;
-
+    @Prop({default : false})
+    occupied : boolean;
 }
 
 export const DriverSchema = SchemaFactory.createForClass(Driver);

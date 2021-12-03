@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { get } from 'http';
 import { DriverService } from './driver.service';
 import { CreateDriverDto } from './dto/CreateDriver.dto';
@@ -15,6 +15,11 @@ export class DriverController {
         return this.driverService.create(createDriverDto);
     }
 
+    @Get('/Ocuppied')
+    async getOneNotOcuppied(): Promise<Driver> {
+        return this.driverService.getOneUnoccupied();
+    }
+
     @Get('/:id')
     async getDriverById(@Param('id') id: string): Promise<Driver> {
         return this.driverService.getById(id);
@@ -29,6 +34,12 @@ export class DriverController {
     async deleteDriver(@Param('id') id: string): Promise<Boolean> {
         return this.driverService.delete(id);
     }
+
+    @Put('/:id')
+    async modifyState(@Param('id')  id: string): Promise<Driver>{
+        return this.driverService.modifyOcuppied(id);
+    }
+
 
 }
 
